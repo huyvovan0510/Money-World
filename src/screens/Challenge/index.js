@@ -3,14 +3,11 @@ import {
   Text,
   View,
   StyleSheet,
-  TouchableOpacity,
-  Animated,
-  Easing,
   SafeAreaView,
   Dimensions,
+  Platform,
+  StatusBar,
 } from 'react-native';
-import LottieView from 'lottie-react-native';
-import lottieAnimated from '../../assets/json';
 import LinearGradient from 'react-native-linear-gradient';
 import Header from './components/Header';
 import {scaleSize} from '../../utils';
@@ -161,6 +158,7 @@ const styles = StyleSheet.create({
   },
   content: {
     flex: 1,
+    paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0,
   },
   header: {
     flexDirection: 'row',

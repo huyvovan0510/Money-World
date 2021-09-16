@@ -4,11 +4,9 @@ import Jars from '../screens/Jars';
 import Challenge from '../screens/Challenge';
 import UserProfile from '../screens/UserProfile';
 import {NavigationContainer} from '@react-navigation/native';
-import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import CustomizeTab from './components/CustomizeTab';
+import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 
-const Stack = createNativeStackNavigator();
 const Tabs = createBottomTabNavigator();
 
 const MainTab = () => {
@@ -27,11 +25,7 @@ const MainTab = () => {
 const RootNavigation = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator
-        initialRouteName={'MainTab'}
-        screenOptions={{headerShown: false}}>
-        <Stack.Screen name={'MainTab'} component={MainTab} />
-      </Stack.Navigator>
+      <MainTab />
     </NavigationContainer>
   );
 };

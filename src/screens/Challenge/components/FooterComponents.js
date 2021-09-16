@@ -1,8 +1,6 @@
 import React, {useImperativeHandle, useRef} from 'react';
-import {StyleSheet, Text, View, Image, Animated} from 'react-native';
+import {StyleSheet, Text, View, Image} from 'react-native';
 import {memoWithRef, scaleSize} from '../../../utils';
-import CountdownCircle from 'react-native-countdown-circle';
-import Svg, {Circle, G} from 'react-native-svg';
 import Timer from './Timer';
 
 const userData = [
